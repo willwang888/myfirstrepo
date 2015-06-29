@@ -18,6 +18,7 @@ int main()
   println( msg("I'm the message returned") );
 }
 
+// other funcs
 std::string msg(std::string s)
 {
   return s;
