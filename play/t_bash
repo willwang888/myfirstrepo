@@ -29,3 +29,11 @@ else
   echo 'NO'
 fi
 
+# bash 4 hash table
+# http://stackoverflow.com/questions/1494178/how-to-define-hash-tables-in-bash
+
+declare -A animals
+animals=( ["moo"]="cow" ["woof"]="dog" )
+for sound in "${!animals[@]}"; do
+  echo "$sound - ${animals["$sound"]}"
+done
