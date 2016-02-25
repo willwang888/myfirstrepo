@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+# https://github.com/reddit/reddit/blob/master/install-reddit.sh
+#
+
+# bash arrays
+NEEDED=(
+    "install.cfg"
+    "done.sh"
+    "install_apt.sh"
+    "install_cassandra.sh"
+    "install_services.sh"
+    "reddit.sh"
+    "setup_cassandra.sh"
+    "setup_mcrouter.sh"
+    "setup_postgres.sh"
+    "setup_rabbitmq.sh"
+    "travis.sh"
+)
+
+for i in ${NEEDED[*]}; do
+  echo  "---$i---"
+done
+
+read -p '[Y/n]' res
+if [[ $res =~ ^[Yy]$ || $res == '' ]]; then
+  echo 'YES'
+else
+  echo 'NO'
+fi
+
