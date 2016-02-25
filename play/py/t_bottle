@@ -1,0 +1,15 @@
+#
+# http://bottlepy.org/docs/dev/index.html
+#
+# pip install bottle
+#
+from bottle import route, run, template
+
+@route('/hello/<name>')
+def index(name):
+    return template('<h1> hello {{name}} </h1>', name=name)
+
+run(host='localhost', port=8888)
+
+
+
