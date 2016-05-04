@@ -20,9 +20,9 @@ def merge1(alist):
     if left[0] < right[0]:
       res.append(left.pop(0))
     else:
-      res.append(right.pop(0)) 
+      res.append(right.pop(0))
 
-  return res + (left or right) 
+  return res + (left or right)
 
 
 def merge2(alist):
@@ -39,7 +39,7 @@ def merge2(alist):
     if left[-1] < right[-1]:
       res.append(right.pop())
     else:
-      res.append(left.pop()) 
+      res.append(left.pop())
 
   res.reverse()
   return (left or right) + res
