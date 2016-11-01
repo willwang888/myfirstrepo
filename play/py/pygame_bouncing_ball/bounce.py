@@ -1,3 +1,4 @@
+# http://www.pygame.org/docs/tut/intro/intro.html
 
 import sys, pygame
 pygame.init()
